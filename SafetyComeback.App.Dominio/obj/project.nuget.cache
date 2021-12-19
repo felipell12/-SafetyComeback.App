@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ptiw9t9aEmfjlSWFQrxXuaWGkPvnZiRjRiiZSXK1NW3KK5euYh2V5j/XFYCaG1aB1tDSvSzcmWyJhJnDM8O97A==",
+  "success": true,
+  "projectFilePath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JAIRO\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

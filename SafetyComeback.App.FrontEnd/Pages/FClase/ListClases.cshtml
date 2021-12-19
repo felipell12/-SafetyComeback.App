@@ -1,0 +1,80 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FClase.ListClasesModel
+@{
+    ViewData["Title"] = "Listado Clases";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de Clases Programadas</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-page="./CreateClase">Crear</a>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model.listClases.Count() > 0)
+        {
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Programa / Carrera</td>
+                        <td>Salón</td>
+                        <td>Fecha de la Clase</td>
+                        <td>Hora</td>
+                        <td>Duración</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var clase in Model.listClases)
+                    {
+                        <tr>
+                            <td>@clase.Id</td>
+                            <td>@clase.Programa.Nombre</td>
+                            <td>@clase.Salon.Numero</td>
+                            <td>@(String.Format("{0:dd/MM/yyyy}",clase.Fecha))</td>
+                            <td>@(String.Format("{0:hh:mm tt}",clase.Hora))</td>
+                            <td>@clase.Duracion</td>
+                            <td>
+                                <a class="btn btn-info" asp-page="../FAforo/ListAforoClases"
+                            asp-route-claseId="@clase.Id">
+                                    <i class="fas fa-light fa-clipboard-list fa-lg" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-warning" asp-page="./EditClase" 
+                                asp-route-claseId="@clase.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-danger" asp-page="./DeleteClase" 
+                                asp-route-claseId="@clase.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-primary table-btn" asp-page="./DetailsClase"
+                            asp-route-claseId="@clase.Id">
+                                    <i class="fas fa-info-circle fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <p>No existen registros</p>
+        }
+    </div>
+
+</div>

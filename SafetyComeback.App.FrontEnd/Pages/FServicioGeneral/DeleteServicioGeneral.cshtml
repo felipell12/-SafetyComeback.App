@@ -1,0 +1,35 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FServicioGeneral.DeleteServicioGeneralModel
+@{
+    ViewData["Title"] = "Eliminar ServicioGeneral";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Eliminar ServicioGeneral</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" >
+                <input type="hidden" asp-for=@Model.ServicioGeneral.Id />
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.ServicioGeneral.Nombres></label>
+                    <input class="form-control" asp-for=@Model.ServicioGeneral.Nombres disabled />
+                    <label class="control-label" asp-for=@Model.ServicioGeneral.Apellidos></label>
+                    <input class="form-control" asp-for=@Model.ServicioGeneral.Apellidos disabled />
+                    <label class="control-label" asp-for=@Model.ServicioGeneral.Identificacion></label>
+                    <input class="form-control" asp-for=@Model.ServicioGeneral.Identificacion disabled />
+                    <label class="control-label" asp-for=@Model.ServicioGeneral.Edad></label>
+                    <input class="form-control" asp-for=@Model.ServicioGeneral.Edad disabled />
+                    <label class="control-label" asp-for=@Model.ServicioGeneral.Estado_COVID></label>
+                    <input class="form-control" asp-for=@Model.ServicioGeneral.Estado_COVID disabled />
+                    <label class="control-label" asp-for=@Model.ServicioGeneral.turno></label>
+                    <input class="form-control" asp-for=@Model.ServicioGeneral.turno disabled />
+                    <input class="btn btn-primary" value="Eliminar ServicioGeneral" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

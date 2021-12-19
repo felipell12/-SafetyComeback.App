@@ -1,0 +1,29 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSintoma.DetailsSintomaModel
+@{
+    ViewData["Title"] = "Detalle Sintoma";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Detalle de Sintoma</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.Id></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.Id disabled />
+                    <label class="control-label" asp-for=@Model.Sintoma.Fecha></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.Fecha disabled />
+                    <label class="control-label" asp-for=@Model.Sintoma.PeriodoAislamiento></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.PeriodoAislamiento disabled />
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-primary" asp-page="./ListSintoma">Lista Sintomas</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

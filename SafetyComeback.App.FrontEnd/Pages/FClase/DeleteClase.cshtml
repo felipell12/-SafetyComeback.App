@@ -1,0 +1,33 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FClase.DeleteClaseModel
+@{
+    ViewData["Title"] = "Eliminar Clase";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Eliminar Clase</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post">
+                <input type="hidden" asp-for=@Model.Clase.Id />
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Clase.ProgramaId ></label>
+                    <input class="form-control" asp-for=@Model.Clase.ProgramaId disabled/>
+                    <label class="control-label" asp-for=@Model.Clase.SalonId></label>
+                    <input class="form-control" asp-for=@Model.Clase.SalonId disabled/>
+                    <label class="control-label" asp-for=@Model.Clase.Fecha></label>
+                    <input class="form-control" asp-for=@Model.Clase.Fecha disabled/>
+                    <label class="control-label" asp-for=@Model.Clase.Hora></label>
+                    <input class="form-control" asp-for=@Model.Clase.Hora disabled/>
+                    <label class="control-label" asp-for=@Model.Clase.Duracion></label>
+                    <input class="form-control" asp-for=@Model.Clase.Duracion disabled/>
+                    <input class="btn btn-primary" value="Eliminar Clase" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

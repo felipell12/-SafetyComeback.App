@@ -1,0 +1,72 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSintoma.ListSintomasModel
+@{
+    ViewData["Title"] = "Listado Síntomas";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de Síntomas</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-route-personaId="@Model.identificador_persona" asp-page="./CreateSintoma">Crear</a>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model.listSintomas.Count() > 0)
+        {
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Fecha</td>
+                        <td>PeriodoAislamiento</td>
+                        <td>Síntomas</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sintoma in Model.listSintomas)
+                    {
+                        <tr>
+                            <td>@sintoma.Id</td>
+                            <td>@sintoma.Fecha</td>
+                            <td>@sintoma.PeriodoAislamiento</td>
+                            <td>@sintoma.Sintomas</td>
+                            <td>
+                                <a class="btn btn-warning" asp-page="./EditSintoma" 
+                                asp-route-sintomaId="@sintoma.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-danger" asp-page="./DeleteSintoma" 
+                                asp-route-sintomaId="@sintoma.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-primary table-btn" asp-page="./DetailsSintoma"
+                            asp-route-sintomaId="@sintoma.Id">
+                                    <i class="fas fa-info-circle fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <p>No existen registros</p>
+        }
+    </div>
+
+</div>

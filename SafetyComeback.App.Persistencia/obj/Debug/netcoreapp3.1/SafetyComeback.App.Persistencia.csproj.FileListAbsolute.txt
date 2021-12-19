@@ -1,0 +1,30 @@
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.deps.json
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.runtimeconfig.json
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.runtimeconfig.dev.json
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.dll
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.pdb
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Dominio.dll
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Dominio.pdb
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.csprojAssemblyReference.cache
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.AssemblyInfoInputs.cache
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.AssemblyInfo.cs
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.csproj.CopyComplete
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.dll
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.pdb
+C:\work\proyectoDW\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.genruntimeconfig.cache
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.deps.json
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.runtimeconfig.json
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.runtimeconfig.dev.json
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.dll
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.pdb
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Dominio.dll
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\bin\Debug\netcoreapp3.1\SafetyComeback.App.Dominio.pdb
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.csprojAssemblyReference.cache
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.AssemblyInfoInputs.cache
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.AssemblyInfo.cs
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.csproj.CopyComplete
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.dll
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.pdb
+C:\Dropbox\ProgramacionUCaldas\Desarrollo de Software\SafetyComebackV7.App\SafetyComeback.App\SafetyComeback.App.Persistencia\obj\Debug\netcoreapp3.1\SafetyComeback.App.Persistencia.genruntimeconfig.cache

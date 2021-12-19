@@ -1,0 +1,87 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FPersona.ListProfesoresModel
+@{
+    ViewData["Title"] = "Listado Profesores";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <form method="get">
+        <div class="form-group">
+            <p>
+                Buscar profesor: <input type="text" name="filtroSearch" asp-for="@Model.FiltroSearch" />
+                <input type="submit" value="Buscar"/>
+            </p>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de Profesores</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-page="./CreateProfesor">Crear</a>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model.listProfesores.Count() > 0)
+        {
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nombres</td>
+                        <td>Apellidos</td>
+                        <td>Identificación</td>
+                        <td>Facultad</td>
+                        <td>Materia</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var profesor in Model.listProfesores)
+                    {
+                        <tr>
+                            <td>@profesor.Id</td>
+                            <td>@profesor.Nombres</td>
+                            <td>@profesor.Apellidos</td>
+                            <td>@profesor.Identificacion</td>
+                            <td>@profesor.Facultad.Nombre</td>
+                            <td>@profesor.Materia</td>
+                            <td>
+                                <a class="btn btn-info" asp-page="../Fsintoma/ListSintoma"
+                            asp-route-personaId="@profesor.Id">
+                                    <i class="fas fa-light fa-file-medical fa-lg" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-warning" asp-page="./EditProfesor"
+                            asp-route-profesorId="@profesor.Id">
+                                    <i class="fas fa-solid fa-address-card fa-lg" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-danger" asp-page="./DeleteProfesor"
+                            asp-route-profesorId="@profesor.Id">
+                                    <i class="fas fa-solid fa-user-minus fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-primary table-btn" asp-page="./DetailsProfesor"
+                            asp-route-profesorId="@profesor.Id">
+                                    <i class="fas fa-light fa-indent fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <p>No existen registros</p>
+        }
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FPersona.DeleteProfesorModel
+@{
+    ViewData["Title"] = "Eliminar Profesor";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Eliminar Profesor</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" >
+                <input type="hidden" asp-for=@Model.Profesor.Id />
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Profesor.Nombres></label>
+                    <input class="form-control" asp-for=@Model.Profesor.Nombres disabled />
+                    <label class="control-label" asp-for=@Model.Profesor.Apellidos></label>
+                    <input class="form-control" asp-for=@Model.Profesor.Apellidos disabled />
+                    <label class="control-label" asp-for=@Model.Profesor.Identificacion></label>
+                    <input class="form-control" asp-for=@Model.Profesor.Identificacion disabled />
+                    <label class="control-label" asp-for=@Model.Profesor.Edad></label>
+                    <input class="form-control" asp-for=@Model.Profesor.Edad disabled />
+                    <label class="control-label" asp-for=@Model.Profesor.Estado_COVID></label>
+                    <input class="form-control" asp-for=@Model.Profesor.Estado_COVID disabled />
+                    <label class="control-label" asp-for=@Model.Profesor.FacultadId></label>
+                    <input class="form-control" asp-for=@Model.Profesor.FacultadId disabled />
+                    <label class="control-label" asp-for=@Model.Profesor.Materia></label>
+                    <input class="form-control" asp-for=@Model.Profesor.Materia disabled />
+                    <input class="btn btn-primary" value="Eliminar Profesor" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

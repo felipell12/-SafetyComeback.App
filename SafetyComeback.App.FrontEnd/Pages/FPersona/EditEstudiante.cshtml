@@ -1,0 +1,59 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FPersona.EditEstudianteModel
+@{
+    ViewData["Title"] = "Editar Estudiante";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Editar Estudiante</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Edit">
+                <input type="hidden" asp-for=@Model.Estudiante.Id />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.Nombres></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Nombres />
+                    <span asp-validation-for=@Model.Estudiante.Nombres class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.Apellidos></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Apellidos />
+                    <span asp-validation-for=@Model.Estudiante.Apellidos class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.Identificacion></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Identificacion />
+                    <span asp-validation-for=@Model.Estudiante.Identificacion class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.Edad></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Edad />
+                    <span asp-validation-for=@Model.Estudiante.Edad class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.Estado_COVID></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Estado_COVID />
+                    <span asp-validation-for=@Model.Estudiante.Estado_COVID class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.ProgramaId></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.ProgramaId />
+                    <span asp-validation-for=@Model.Estudiante.ProgramaId class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Estudiante.Semestre></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Semestre />
+                    <span asp-validation-for=@Model.Estudiante.Semestre class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" value="Editar Estudiante" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

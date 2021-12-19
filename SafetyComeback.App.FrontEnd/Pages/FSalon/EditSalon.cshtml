@@ -1,0 +1,39 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSalon.EditSalonModel
+@{
+    ViewData["Title"] = "Editar Salon";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Editar Salon</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for=@Model.Salon.Id />
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Salon.Numero></label>
+                    <input class="form-control" asp-for=@Model.Salon.Numero />
+                    <span asp-validation-for=@Model.Salon.Numero class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Salon.Aforo></label>
+                    <input class="form-control" asp-for=@Model.Salon.Aforo />
+                    <span asp-validation-for=@Model.Salon.Aforo class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Salon.SedeId></label>
+                    <input class="form-control" asp-for=@Model.Salon.SedeId />
+                    <span asp-validation-for=@Model.Salon.SedeId class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" value="Editar Salón" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FAforo.EditAforoClaseModel
+@{
+    ViewData["Title"] = "Editar Registro";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Editar Registro Asistencia</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Edit">
+                <input type="hidden" asp-for=@Model.AforoClase.Id />
+                <input type="hidden" asp-for=@Model.AforoClase.ClaseId value="@Model.AforoClase.ClaseId" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.AforoClase.PersonaId></label>
+                    <input class="form-control" asp-for=@Model.AforoClase.PersonaId/>
+                    <span asp-validation-for=@Model.AforoClase.PersonaId class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" value="Editar AforoClase" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

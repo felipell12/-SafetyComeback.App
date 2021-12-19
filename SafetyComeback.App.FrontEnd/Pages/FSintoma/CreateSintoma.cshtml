@@ -1,0 +1,39 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSintoma.CreateSintomaModel
+@{
+    ViewData["Title"] = "Crear Síntoma";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Crear Síntoma</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Create">
+                <input type="hidden" asp-for=@Model.Sintoma.PersonaId value="@Model.identificador_persona" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.Fecha></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.Fecha/>
+                    <span asp-validation-for=@Model.Sintoma.Fecha class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.PeriodoAislamiento></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.PeriodoAislamiento />
+                    <span asp-validation-for=@Model.Sintoma.PeriodoAislamiento class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.Sintomas></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.Sintomas />
+                    <span asp-validation-for=@Model.Sintoma.Sintomas class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" value="Crear Sintoma" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

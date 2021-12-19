@@ -1,0 +1,38 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FPersona.DetailsEstudianteModel
+@{
+    ViewData["Title"] = "Detalle Estudiante";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Detalle de Estudiante</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form  >
+                <div class="form-group">
+                     <label class="control-label" asp-for=@Model.Estudiante.Nombres></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Nombres disabled />
+                    <label class="control-label" asp-for=@Model.Estudiante.Apellidos></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Apellidos disabled />
+                    <label class="control-label" asp-for=@Model.Estudiante.Identificacion></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Identificacion disabled />
+                    <label class="control-label" asp-for=@Model.Estudiante.Edad></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Edad disabled />
+                    <label class="control-label" asp-for=@Model.Estudiante.Estado_COVID></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Estado_COVID disabled />
+                    <label class="control-label" asp-for=@Model.Estudiante.ProgramaId></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.ProgramaId disable/>
+
+                    <label class="control-label" asp-for=@Model.Estudiante.Semestre></label>
+                    <input class="form-control" asp-for=@Model.Estudiante.Semestre disabled />
+                 </div>
+                <div class="form-group">
+                    <a class="btn btn-primary" asp-page="./ListEstudiantes" >Lista Estudiantes</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

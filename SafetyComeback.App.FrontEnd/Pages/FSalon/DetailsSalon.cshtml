@@ -1,0 +1,67 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSalon.DetailsSalonModel
+@{
+    ViewData["Title"] = "Detalle Salón";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Detalle de Salón</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form  >
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Salon.Numero></label>
+                    <input class="form-control" asp-for=@Model.Salon.Numero disabled/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Salon.Aforo></label>
+                    <input class="form-control" asp-for=@Model.Salon.Aforo disabled/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Salon.SedeId></label>
+                    <input class="form-control" asp-for=@Model.Salon.SedeId disabled/>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Listado de Clases Programadas</h3>
+        </div>
+        @if (Model.Salon.Clases.Count()>0)
+        {
+            <table class="table table-sm table-bordered table-striped">
+                
+                    <thead>
+                        <tr>
+                            <td>Fecha</td>
+                            <td>Hora</td>
+                            <td>Duración</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var clase in Model.Salon.Clases)
+                        {
+                        <tr>
+                            <td>@clase.Fecha</td>
+                            <td>@clase.Hora</td>
+                            <td>@clase.Duracion</td>
+                       </tr>
+                        }
+                    </tbody>
+                   
+            </table>
+        }
+        else
+        {
+            <p>No existen clases programadas</p>
+        }
+    </div>
+    <div class="form-group">
+        <a class="btn btn-primary" asp-page="./ListSalones" >Lista Salones</a>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FDirectivo.DeleteDirectivoModel
+@{
+    ViewData["Title"] = "Eliminar Directivo";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Eliminar Directivo</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" >
+                <input type="hidden" asp-for=@Model.Directivo.Id />
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Directivo.Nombres></label>
+                    <input class="form-control" asp-for=@Model.Directivo.Nombres disabled />
+                    <label class="control-label" asp-for=@Model.Directivo.Apellidos></label>
+                    <input class="form-control" asp-for=@Model.Directivo.Apellidos disabled />
+                    <label class="control-label" asp-for=@Model.Directivo.Identificacion></label>
+                    <input class="form-control" asp-for=@Model.Directivo.Identificacion disabled />
+                    <label class="control-label" asp-for=@Model.Directivo.Edad></label>
+                    <input class="form-control" asp-for=@Model.Directivo.Edad disabled />
+                    <label class="control-label" asp-for=@Model.Directivo.Estado_COVID></label>
+                    <input class="form-control" asp-for=@Model.Directivo.Estado_COVID disabled />
+                    <label class="control-label" asp-for=@Model.Directivo.Dependencia></label>
+                    <input class="form-control" asp-for=@Model.Directivo.Dependencia disabled />
+                    <input class="btn btn-primary" value="Eliminar Directivo" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

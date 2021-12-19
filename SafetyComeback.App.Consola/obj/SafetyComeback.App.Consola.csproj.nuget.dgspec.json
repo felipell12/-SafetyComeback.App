@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Consola\\SafetyComeback.App.Consola.csproj": {}
+  },
+  "projects": {
+    "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Consola\\SafetyComeback.App.Consola.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Consola\\SafetyComeback.App.Consola.csproj",
+        "projectName": "SafetyComeback.App.Consola",
+        "projectPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Consola\\SafetyComeback.App.Consola.csproj",
+        "packagesPath": "C:\\Users\\JAIRO\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Consola\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JAIRO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj": {
+                "projectPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj"
+              },
+              "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Persistencia\\SafetyComeback.App.Persistencia.csproj": {
+                "projectPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Persistencia\\SafetyComeback.App.Persistencia.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.19, 3.1.19]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj",
+        "projectName": "SafetyComeback.App.Dominio",
+        "projectPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\JAIRO\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JAIRO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Persistencia\\SafetyComeback.App.Persistencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Persistencia\\SafetyComeback.App.Persistencia.csproj",
+        "projectName": "SafetyComeback.App.Persistencia",
+        "projectPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Persistencia\\SafetyComeback.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\JAIRO\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Persistencia\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JAIRO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj": {
+                "projectPath": "C:\\work\\proyectoDW\\SafetyComeback.App\\SafetyComeback.App.Dominio\\SafetyComeback.App.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

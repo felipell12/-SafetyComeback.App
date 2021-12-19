@@ -1,0 +1,87 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FPersona.ListEstudiantesModel
+@{
+    ViewData["Title"] = "Listado Estudiantes";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <form method="get">
+        <div class="form-group">
+            <p>
+                Buscar estudiante: <input type="text" name="filtroSearch" asp-for="@Model.FiltroSearch" />
+                <input type="submit" value="Buscar"/>
+            </p>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de Estudiantes</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-page="./CreateEstudiante" >Crear</a>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model.listEstudiantes.Count() > 0)
+        {
+            <table class="table table-sm table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nombres</td>
+                        <td>Apellidos</td>
+                        <td>Identificación</td>
+                        <td>Carrera</td>
+                        <td>Semestre</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var estudiante in Model.listEstudiantes)
+                    {
+                        <tr>
+                            <td>@estudiante.Id</td>
+                            <td>@estudiante.Nombres</td>
+                            <td>@estudiante.Apellidos</td>
+                            <td>@estudiante.Identificacion</td>
+                            <td>@estudiante.Programa.Nombre</td>
+                            <td>@estudiante.Semestre</td>
+                            <td>
+                                <a class="btn btn-info" asp-page="../Fsintoma/ListSintoma"
+                            asp-route-personaId="@estudiante.Id">
+                                    <i class="fas fa-light fa-file-medical fa-lg" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-warning" asp-page="./EditEstudiante"
+                            asp-route-estudianteId="@estudiante.Id">
+                                    <i class="fas fa-solid fa-address-card fa-lg" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-danger" asp-page="./DeleteEstudiante"
+                            asp-route-estudianteId="@estudiante.Id">
+                                    <i class="fas fa-solid fa-user-minus fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-primary table-btn" asp-page="./DetailsEstudiante"
+                            asp-route-estudianteId="@estudiante.Id">
+                                    <i class="fas fa-light fa-indent fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <p>No existen registros</p>
+        }
+    </div>
+
+</div>

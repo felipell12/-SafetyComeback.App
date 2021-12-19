@@ -1,0 +1,39 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSintoma.EditSintomaModel
+@{
+    ViewData["Title"] = "Editar Sintoma";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Editar Sintoma</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="Edit">
+                <input type="hidden" asp-for=@Model.Sintoma.Id />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.Fecha></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.Fecha/>
+                    <span asp-validation-for=@Model.Sintoma.Fecha class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.PeriodoAislamiento></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.PeriodoAislamiento />
+                    <span asp-validation-for=@Model.Sintoma.PeriodoAislamiento class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sintoma.Sintomas></label>
+                    <input class="form-control" asp-for=@Model.Sintoma.Sintomas />
+                    <span asp-validation-for=@Model.Sintoma.Sintomas class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" value="Editar Sintoma" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,85 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FAforo.ListAforoClasesModel
+@{
+    ViewData["Title"] = "ListadoClase";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="close" >
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>Control asistencia Salon: @Model.act_clase.Salon.Numero</h5>
+            <h5>Programa: @Model.act_clase.Programa.Nombre</h5>
+            <h5>Fecha: @(String.Format("{0:dd/MM/yyyy}",@Model.act_clase.Fecha)) Hora: @(String.Format("{0:hh:mm tt}",@Model.act_clase.Hora))</h5>
+            <h5>Aforo máximo permitido:@Model.act_clase.Salon.Aforo </h5>
+        </div>
+        @if (Model.listAforoClases.Count()<@Model.act_clase.Salon.Aforo)
+        {
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-route-claseId="@Model.identificador_clase" asp-page="./CreateAforoClase" >Crear</a>
+        </div>
+        }
+        else
+        {
+            <div class="col-sm-6">
+            <p class="btn btn-danger d-block" >Aforo completo</p>
+            </div>
+        }
+    </div>
+    <div class="row">
+        @if (Model.listAforoClases.Count() > 0)
+        {
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Identificación</td>
+                        <td>Nombre</td>
+                        <td>Resultado COVID</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var asistente in Model.listAforoClases)
+                    {
+                        <tr>
+                            <td>@asistente.Id</td>
+                            <td>@asistente.Persona.Identificacion</td>
+                            <td>@asistente.Persona.Nombres @asistente.Persona.Apellidos</td>
+                            <td>@asistente.Persona.Estado_COVID</td>
+                            <td>
+                                <a class="btn btn-warning" asp-page="./EditAforoClase" 
+                                asp-route-aforoClaseId="@asistente.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-danger" asp-page="./DeleteAforoClase" 
+                                asp-route-aforoClaseId="@asistente.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-primary table-btn" asp-page="./DetailsAforoClase"
+                            asp-route-aforoClaseId="@asistente.Id">
+                                    <i class="fas fa-info-circle fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <p>No existen asistentes</p>
+        }
+        <h5>Total asistentes: @Model.listAforoClases.Count() </h5>
+    </div>
+
+</div>

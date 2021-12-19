@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SafetyComeback.App.FrontEnd</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">SafetyComeback</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial"/>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="btn btn-info" asp-area="" asp-page="/Index" asp-title="Home">Home</a>
+                        </li>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Campus
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-page="/FSede/ListSedes">Sedes</a>
+                                <a class="dropdown-item" asp-page="/FSalon/ListSalones">Salones</a>
+                                <a class="dropdown-item" asp-page="/FFacultad/ListFacultades">Facultades</a>
+                                <a class="dropdown-item" asp-page="/FPrograma/ListProgramas">Programas</a>
+                            </div>
+                        </div>                                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Comunidad
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-page="/FPersona/ListEstudiantes">Estudiantes</a>
+                                <a class="dropdown-item" asp-page="/FPersona/ListProfesores">Profesores</a>
+                                <a class="dropdown-item" asp-page="/FDirectivo/ListDirectivos">Directivos</a>
+                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" asp-page="/FServicioGeneral/ListServiciosGenerales">Servicios_Generales</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Clases y aforos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-page="/FClase/ListClases">Clases</a>
+                                <a class="dropdown-item" asp-page="">Asistencia y aforo</a>
+                                <a class="dropdown-item" asp-page="">Reporte focos COVID</a>
+                            </div>
+                        </div>   
+                        <li class="nav-item">
+                            <a class="btn btn-info" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2021 - SafetyComeback.App - <a asp-area="" asp-page="/Privacy">Privacy</a>
+                </div>
+                <div class="col-sm-6">
+                    <a asp-area="" asp-page="/Team"> Equipo: TeamBlue </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

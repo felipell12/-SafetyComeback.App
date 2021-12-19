@@ -1,0 +1,68 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FFacultad.ListFacultadesModel
+@{
+    ViewData["Title"] = "Listado Facultades";
+}
+<div class="container">
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dimissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" date-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de Facultades</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-page="./CreateFacultad">Crear</a>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model.listFacultades.Count()>0)
+        {
+            <table class="table table-bordered table-striped">
+                
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Nombre</td>
+                            <td>Acciones</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var facultad in Model.listFacultades)
+                        {
+                        <tr>
+                            <td>@facultad.Id</td>
+                            <td>@facultad.Nombre</td>
+                            <td>
+                                <a class="btn btn-warning" asp-page="./EditFacultad" 
+                            asp-route-facultadId="@facultad.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-danger" asp-page="./DeleteFacultad" 
+                            asp-route-facultadId="@facultad.Id">
+                                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                            </a>
+                                <a class="btn btn-primary table-btn" asp-page="./DetailsFacultad" 
+                            asp-route-facultadId="@facultad.Id">
+                                    <i class="fas fa-info-circle fa-lg" aria-hidden="true"></i>
+                            </a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                   
+            </table>
+        }
+        else
+        {
+            <p>No existen registros</p>
+        }
+    </div>
+
+</div>

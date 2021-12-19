@@ -1,0 +1,25 @@
+﻿@page
+@model SafetyComeback.App.FrontEnd.Pages.FSede.DeleteSedeModel
+@{
+    ViewData["Title"] = "Eliminar Sede";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Eliminar Sede</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" >
+                <input type="hidden" asp-for=@Model.Sede.Id />
+                <div class="form-group">
+                    <label class="control-label" asp-for=@Model.Sede.Nombre ></label>
+                    <input class="form-control" asp-for=@Model.Sede.Nombre disabled />
+                    <input class="btn btn-primary" value="Eliminar Sede" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
